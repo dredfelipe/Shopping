@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Leaf, Minus, Plus, ShoppingCart, Trash2 } from 'lucide-react';
+import AboutUs from './AboutUs.jsx';
 import './styles.css';
 
 const products = [
@@ -119,6 +120,9 @@ function App() {
           </span>
         </button>
         <nav>
+          <button className={view === 'about' ? 'active' : ''} onClick={() => setView('about')}>
+            About Us
+          </button>
           <button className={view === 'products' ? 'active' : ''} onClick={() => setView('products')}>
             Products
           </button>
@@ -143,6 +147,8 @@ function App() {
           </div>
         </main>
       )}
+
+      {view === 'about' && <AboutUs />}
 
       {view === 'products' && (
         <main className="products-page">
