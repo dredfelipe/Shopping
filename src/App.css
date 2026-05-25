@@ -170,14 +170,16 @@ h1 {
   background: #195b39;
 }
 
-.about-card {
+.about-card,
+.about-us-container {
   padding: 24px;
   color: #172317;
   background: rgba(255, 255, 255, 0.92);
   border-radius: 8px;
 }
 
-.about-card p {
+.about-card p,
+.about-us-container p {
   color: #4d6049;
   line-height: 1.7;
 }
