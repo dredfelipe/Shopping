@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "homepage": "https://dredfelipe.github.io/Shopping/",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
+    "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest"
-  },
-  "devDependencies": {}
+    "react-redux": "^9.3.0",
+    "vite": "latest"
+  }
 }
