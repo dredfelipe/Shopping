@@ -13,7 +13,7 @@ function App() {
           <div className="landing-overlay">
             <section className="landing-content">
               <p className="eyebrow">Online plant shop</p>
-              <h1>Paradise Nursery</h1>
+              <h1>Welcome to Paradise Nursery</h1>
               <p>
                 Paradise Nursery helps you create a fresher, greener home with carefully selected
                 houseplants for every room, care level, and style.
