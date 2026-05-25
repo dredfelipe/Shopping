@@ -12,7 +12,7 @@ function App() {
       {page !== 'home' && <Header page={page} setPage={setPage} />}
 
       {page === 'home' && (
-        <main className="landing-page">
+        <main className="landing-page background-image">
           <div className="landing-overlay">
             <section className="landing-content">
               <p className="eyebrow">Online plant shop</p>
