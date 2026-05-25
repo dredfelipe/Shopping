@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from './CartSlice.jsx';
+import { addItem } from './CartSlice.jsx';
 import plants from './plants.js';
 import { formatCurrency } from './utils.js';
 
@@ -37,7 +37,7 @@ function ProductList() {
                     <h3>{plant.name}</h3>
                     <div className="product-actions">
                       <strong>{formatCurrency(plant.price)}</strong>
-                      <button onClick={() => dispatch(addToCart(plant))} disabled={isAdded}>
+                      <button onClick={() => dispatch(addItem(plant))} disabled={isAdded}>
                         {isAdded ? 'Added to Cart' : 'Add to Cart'}
                       </button>
                     </div>

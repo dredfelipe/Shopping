@@ -1,7 +1,7 @@
 import React from 'react';
 import { Minus, Plus, Trash2 } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
-import { decreaseQuantity, deleteItem, increaseQuantity } from './CartSlice.jsx';
+import { removeItem, updateQuantity } from './CartSlice.jsx';
 import { formatCurrency } from './utils.js';
 
 function CartItem({ setPage }) {
@@ -37,15 +37,15 @@ function CartItem({ setPage }) {
                   <strong>Total cost: {formatCurrency(item.price * item.quantity)}</strong>
                 </div>
                 <div className="quantity-controls" aria-label={`${item.name} quantity controls`}>
-                  <button onClick={() => dispatch(decreaseQuantity(item.id))} aria-label={`Decrease ${item.name}`}>
+                  <button onClick={() => dispatch(updateQuantity({ id: item.id, quantity: item.quantity - 1 }))} aria-label={`Decrease ${item.name}`}>
                     <Minus size={16} />
                   </button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => dispatch(increaseQuantity(item.id))} aria-label={`Increase ${item.name}`}>
+                  <button onClick={() => dispatch(updateQuantity({ id: item.id, quantity: item.quantity + 1 }))} aria-label={`Increase ${item.name}`}>
                     <Plus size={16} />
                   </button>
                 </div>
-                <button className="icon-danger" onClick={() => dispatch(deleteItem(item.id))} aria-label={`Delete ${item.name}`}>
+                <button className="icon-danger" onClick={() => dispatch(removeItem(item.id))} aria-label={`Delete ${item.name}`}>
                   <Trash2 size={18} />
                 </button>
               </article>
