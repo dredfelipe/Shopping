@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from './Header.jsx';
 import AboutUs from './AboutUs.jsx';
 import ProductList from './ProductList.jsx';
 import CartItem from './CartItem.jsx';
@@ -9,8 +8,6 @@ function App() {
 
   return (
     <div>
-      {page !== 'home' && <Header page={page} setPage={setPage} />}
-
       {page === 'home' && (
         <main className="landing-page background-image">
           <div className="landing-overlay">
@@ -28,7 +25,7 @@ function App() {
         </main>
       )}
 
-      {page === 'products' && <ProductList />}
+      {page === 'products' && <ProductList setPage={setPage} />}
       {page === 'cart' && <CartItem setPage={setPage} />}
     </div>
   );
